@@ -1,0 +1,17 @@
+LIBRARY modulation_pmf_update_mex.mexw64
+EXPORTS
+mexFunction
+mexfilerequiredapiversion
+emlrtMexFcnProperties
+modulation_pmf_update
+emxEnsureCapacity_int32_T
+emxEnsureCapacity_real_T
+emxEnsureCapacity_real_T1
+emxFree_int32_T
+emxFree_real_T
+emxInit_int32_T
+emxInit_real_T
+emxInit_real_T1
+modulation_pmf_update_initialize
+modulation_pmf_update_terminate
+modulation_pmf_update_atexit

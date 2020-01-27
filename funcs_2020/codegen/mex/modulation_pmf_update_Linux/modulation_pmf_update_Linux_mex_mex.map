@@ -1,0 +1,15 @@
+MEX {
+	global:
+		mexFunction;
+		mexfilerequiredapiversion;
+		emlrtMexFcnProperties;
+		modulation_pmf_update_Linux;
+		emxEnsureCapacity_real_T;
+		emxFree_real_T;
+		emxInit_real_T;
+		modulation_pmf_update_Linux_initialize;
+		modulation_pmf_update_Linux_terminate;
+		modulation_pmf_update_Linux_atexit;
+	local:
+		*;
+};

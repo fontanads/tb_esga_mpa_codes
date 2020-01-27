@@ -1,0 +1,22 @@
+LIBRARY uplink_SCMA_mex.mexw64
+EXPORTS
+mexFunction
+mexfilerequiredapiversion
+emlrtMexFcnProperties
+uplink_SCMA
+emxEnsureCapacity_creal_T
+emxEnsureCapacity_creal_T1
+emxEnsureCapacity_creal_T2
+emxEnsureCapacity_int32_T
+emxEnsureCapacity_real_T
+emxFree_creal_T
+emxFree_int32_T
+emxFree_real_T
+emxInit_creal_T
+emxInit_creal_T1
+emxInit_creal_T2
+emxInit_int32_T
+emxInit_real_T
+uplink_SCMA_initialize
+uplink_SCMA_terminate
+uplink_SCMA_atexit
