@@ -11,7 +11,7 @@
 #include "error.h"
 
 /* Variable Definitions */
-static emlrtRTEInfo de_emlrtRTEI = { 19,/* lineNo */
+static emlrtRTEInfo ie_emlrtRTEI = { 19,/* lineNo */
   5,                                   /* colNo */
   "error",                             /* fName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\shared\\coder\\coder\\+coder\\+internal\\error.m"/* pName */
@@ -20,37 +20,37 @@ static emlrtRTEInfo de_emlrtRTEI = { 19,/* lineNo */
 /* Function Definitions */
 void b_error(const emlrtStack *sp)
 {
-  emlrtErrorWithMessageIdR2018a(sp, &de_emlrtRTEI,
+  emlrtErrorWithMessageIdR2018a(sp, &ie_emlrtRTEI,
     "Coder:toolbox:eml_setop_unsortedA", "Coder:toolbox:eml_setop_unsortedA", 0);
 }
 
 void c_error(const emlrtStack *sp)
 {
-  emlrtErrorWithMessageIdR2018a(sp, &de_emlrtRTEI,
-    "Coder:toolbox:reshape_emptyReshapeLimit",
-    "Coder:toolbox:reshape_emptyReshapeLimit", 0);
+  emlrtErrorWithMessageIdR2018a(sp, &ie_emlrtRTEI,
+    "Coder:toolbox:eml_setop_unsortedB", "Coder:toolbox:eml_setop_unsortedB", 0);
 }
 
 void d_error(const emlrtStack *sp)
 {
-  emlrtErrorWithMessageIdR2018a(sp, &de_emlrtRTEI,
-    "Coder:toolbox:eml_setop_unsortedB", "Coder:toolbox:eml_setop_unsortedB", 0);
+  static const char_T varargin_1[4] = { 's', 'q', 'r', 't' };
+
+  emlrtErrorWithMessageIdR2018a(sp, &ie_emlrtRTEI,
+    "Coder:toolbox:ElFunDomainError", "Coder:toolbox:ElFunDomainError", 3, 4, 4,
+    varargin_1);
 }
 
 void e_error(const emlrtStack *sp)
 {
-  static const char_T varargin_1[4] = { 's', 'q', 'r', 't' };
-
-  emlrtErrorWithMessageIdR2018a(sp, &de_emlrtRTEI,
-    "Coder:toolbox:ElFunDomainError", "Coder:toolbox:ElFunDomainError", 3, 4, 4,
-    varargin_1);
+  emlrtErrorWithMessageIdR2018a(sp, &ie_emlrtRTEI,
+    "Coder:toolbox:reshape_emptyReshapeLimit",
+    "Coder:toolbox:reshape_emptyReshapeLimit", 0);
 }
 
 void error(const emlrtStack *sp)
 {
   static const char_T varargin_1[4] = { 'l', 'o', 'g', '2' };
 
-  emlrtErrorWithMessageIdR2018a(sp, &de_emlrtRTEI,
+  emlrtErrorWithMessageIdR2018a(sp, &ie_emlrtRTEI,
     "Coder:toolbox:ElFunDomainError", "Coder:toolbox:ElFunDomainError", 3, 4, 4,
     varargin_1);
 }
@@ -59,14 +59,14 @@ void f_error(const emlrtStack *sp)
 {
   static const char_T varargin_1[3] = { 'l', 'o', 'g' };
 
-  emlrtErrorWithMessageIdR2018a(sp, &de_emlrtRTEI,
+  emlrtErrorWithMessageIdR2018a(sp, &ie_emlrtRTEI,
     "Coder:toolbox:ElFunDomainError", "Coder:toolbox:ElFunDomainError", 3, 4, 3,
     varargin_1);
 }
 
 void g_error(const emlrtStack *sp)
 {
-  emlrtErrorWithMessageIdR2018a(sp, &de_emlrtRTEI, "MATLAB:nologicalnan",
+  emlrtErrorWithMessageIdR2018a(sp, &ie_emlrtRTEI, "MATLAB:nologicalnan",
     "MATLAB:nologicalnan", 0);
 }
 

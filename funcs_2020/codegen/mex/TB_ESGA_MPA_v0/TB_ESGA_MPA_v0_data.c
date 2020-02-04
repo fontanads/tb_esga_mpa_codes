@@ -89,47 +89,47 @@ emlrtRSInfo wb_emlrtRSI = { 31,        /* lineNo */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\eml\\+coder\\+internal\\safeEq.m"/* pathName */
 };
 
-emlrtRSInfo dc_emlrtRSI = { 33,        /* lineNo */
-  "reshape",                           /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\elmat\\reshape.m"/* pathName */
-};
-
-emlrtRSInfo ec_emlrtRSI = { 114,       /* lineNo */
-  "reshape",                           /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\elmat\\reshape.m"/* pathName */
-};
-
-emlrtRSInfo oc_emlrtRSI = { 227,       /* lineNo */
+emlrtRSInfo sc_emlrtRSI = { 227,       /* lineNo */
   "eml_setop",                         /* fcnName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pathName */
 };
 
-emlrtRSInfo qc_emlrtRSI = { 259,       /* lineNo */
+emlrtRSInfo uc_emlrtRSI = { 259,       /* lineNo */
   "eml_setop",                         /* fcnName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pathName */
 };
 
-emlrtRSInfo md_emlrtRSI = { 64,        /* lineNo */
+emlrtRSInfo rd_emlrtRSI = { 64,        /* lineNo */
   "sumprod",                           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumprod.m"/* pathName */
 };
 
-emlrtRSInfo nd_emlrtRSI = { 134,       /* lineNo */
+emlrtRSInfo sd_emlrtRSI = { 134,       /* lineNo */
   "combineVectorElements",             /* fcnName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\datafun\\private\\combineVectorElements.m"/* pathName */
 };
 
-emlrtRSInfo od_emlrtRSI = { 193,       /* lineNo */
+emlrtRSInfo td_emlrtRSI = { 193,       /* lineNo */
   "combineVectorElements",             /* fcnName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\datafun\\private\\combineVectorElements.m"/* pathName */
 };
 
-emlrtRSInfo fe_emlrtRSI = { 13,        /* lineNo */
+emlrtRSInfo yd_emlrtRSI = { 33,        /* lineNo */
+  "reshape",                           /* fcnName */
+  "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\elmat\\reshape.m"/* pathName */
+};
+
+emlrtRSInfo ae_emlrtRSI = { 114,       /* lineNo */
+  "reshape",                           /* fcnName */
+  "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\elmat\\reshape.m"/* pathName */
+};
+
+emlrtRSInfo oe_emlrtRSI = { 13,        /* lineNo */
   "log",                               /* fcnName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\elfun\\log.m"/* pathName */
 };
 
-emlrtRTEInfo me_emlrtRTEI = { 22,      /* lineNo */
+emlrtRTEInfo re_emlrtRTEI = { 22,      /* lineNo */
   23,                                  /* colNo */
   "sumprod",                           /* fName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumprod.m"/* pName */

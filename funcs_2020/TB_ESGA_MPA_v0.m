@@ -169,9 +169,16 @@ end % end packet index
 %-------------------------------------------------------------------------------------------
     %% Fix user j, Find strong and weak users @ FN k 
     function [strong_users, weak_users] = find_strong_and_weak_users()
-        h_kj = squeeze(H(k,j,nr));       % channel fading of user j in FN k @ Rx antenna nr
-        hk = squeeze(H(k,:,nr)).*F(k,:); % channel fadings of all users in FN k (if VN not in FN k, fading = 0) @ Rx Antenna nr
-        strong_users = intersect( find( (abs(hk).^2) >= (r_th * abs(h_kj)^2)  ) ,phi_k_except_j); % users in FN k (except j) that satisfy threshold "r_th * abs(h_kj)^2" are included in strong_users
+        
+%         h_kj = squeeze(H(k,j,nr));       % channel fading of user j in FN k @ Rx antenna nr
+        
+        dummy_zero_j = ones(1,J); dummy_zero_j(j)=0;
+        channel_gains = (abs(H(k,:,nr)).^2);
+        hk_gain_sparse = channel_gains.*dummy_zero_j.*F(k,:); % channel fadings of all users in FN k (if VN not in FN k, fading = 0) @ Rx Antenna nr
+        [h_k_ref, user_ref] = max(hk_gain_sparse);
+        
+        
+        strong_users = intersect( find( (hk_gain_sparse) >= (r_th * h_k_ref)  ) ,phi_k_except_j); % users in FN k (except j) that satisfy threshold "r_th * abs(h_kj)^2" are included in strong_users
         weak_users = setdiff(phi_k_except_j,strong_users); % remaining users are considered weak interference
     end
 

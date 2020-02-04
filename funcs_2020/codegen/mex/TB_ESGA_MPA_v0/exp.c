@@ -14,12 +14,12 @@
 #include "TB_ESGA_MPA_v0_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo yd_emlrtRSI = { 9,  /* lineNo */
+static emlrtRSInfo ie_emlrtRSI = { 9,  /* lineNo */
   "exp",                               /* fcnName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\elfun\\exp.m"/* pathName */
 };
 
-static emlrtRSInfo ae_emlrtRSI = { 31, /* lineNo */
+static emlrtRSInfo je_emlrtRSI = { 31, /* lineNo */
   "applyScalarFunctionInPlace",        /* fcnName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\eml\\+coder\\+internal\\applyScalarFunctionInPlace.m"/* pathName */
 };
@@ -35,13 +35,13 @@ void b_exp(const emlrtStack *sp, emxArray_real_T *x)
   emlrtStack c_st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &yd_emlrtRSI;
+  st.site = &ie_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   nx = x->size[2];
-  b_st.site = &ae_emlrtRSI;
+  b_st.site = &je_emlrtRSI;
   overflow = ((!(1 > x->size[2])) && (x->size[2] > 2147483646));
   if (overflow) {
     c_st.site = &lb_emlrtRSI;
@@ -63,13 +63,13 @@ void c_exp(const emlrtStack *sp, emxArray_real_T *x)
   emlrtStack c_st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &yd_emlrtRSI;
+  st.site = &ie_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   nx = x->size[0];
-  b_st.site = &ae_emlrtRSI;
+  b_st.site = &je_emlrtRSI;
   overflow = ((!(1 > x->size[0])) && (x->size[0] > 2147483646));
   if (overflow) {
     c_st.site = &lb_emlrtRSI;

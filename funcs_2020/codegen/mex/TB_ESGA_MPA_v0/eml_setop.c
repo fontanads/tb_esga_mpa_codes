@@ -21,7 +21,7 @@ static emlrtRSInfo pb_emlrtRSI = { 225,/* lineNo */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pathName */
 };
 
-static emlrtRSInfo pc_emlrtRSI = { 228,/* lineNo */
+static emlrtRSInfo tc_emlrtRSI = { 228,/* lineNo */
   "eml_setop",                         /* fcnName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pathName */
 };
@@ -50,31 +50,31 @@ static emlrtRTEInfo bc_emlrtRTEI = { 398,/* lineNo */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pName */
 };
 
-static emlrtRTEInfo oc_emlrtRTEI = { 409,/* lineNo */
+static emlrtRTEInfo qc_emlrtRTEI = { 409,/* lineNo */
   18,                                  /* colNo */
   "eml_setop",                         /* fName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pName */
 };
 
-static emlrtRTEInfo pc_emlrtRTEI = { 409,/* lineNo */
+static emlrtRTEInfo rc_emlrtRTEI = { 409,/* lineNo */
   13,                                  /* colNo */
   "eml_setop",                         /* fName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pName */
 };
 
-static emlrtRTEInfo fe_emlrtRTEI = { 392,/* lineNo */
+static emlrtRTEInfo ke_emlrtRTEI = { 392,/* lineNo */
   5,                                   /* colNo */
   "eml_setop",                         /* fName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pName */
 };
 
-static emlrtRTEInfo ge_emlrtRTEI = { 430,/* lineNo */
+static emlrtRTEInfo le_emlrtRTEI = { 430,/* lineNo */
   5,                                   /* colNo */
   "eml_setop",                         /* fName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pName */
 };
 
-static emlrtRTEInfo ie_emlrtRTEI = { 403,/* lineNo */
+static emlrtRTEInfo ne_emlrtRTEI = { 403,/* lineNo */
   9,                                   /* colNo */
   "eml_setop",                         /* fName */
   "C:\\Program Files\\MATLAB\\R2018a\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pName */
@@ -168,8 +168,8 @@ void b_do_vectors(const emlrtStack *sp, const emxArray_real_T *a, const
   }
 
   if (!issorted(b)) {
-    st.site = &pc_emlrtRSI;
-    d_error(&st);
+    st.site = &tc_emlrtRSI;
+    c_error(&st);
   }
 
   nc = 0;
@@ -232,7 +232,7 @@ void b_do_vectors(const emlrtStack *sp, const emxArray_real_T *a, const
   emxInit_int32_T(sp, &b_ia, 1, &ac_emlrtRTEI, true);
   if (ncmax > 0) {
     if (!(nc <= ncmax)) {
-      emlrtErrorWithMessageIdR2018a(sp, &fe_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(sp, &ke_emlrtRTEI,
         "Coder:builtins:AssertionFailed", "Coder:builtins:AssertionFailed", 0);
     }
 
@@ -258,7 +258,7 @@ void b_do_vectors(const emlrtStack *sp, const emxArray_real_T *a, const
     }
 
     if (!(nc <= ncmax)) {
-      emlrtErrorWithMessageIdR2018a(sp, &ie_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(sp, &ne_emlrtRTEI,
         "Coder:builtins:AssertionFailed", "Coder:builtins:AssertionFailed", 0);
     }
 
@@ -270,14 +270,14 @@ void b_do_vectors(const emlrtStack *sp, const emxArray_real_T *a, const
 
     ialast = b_ia->size[0];
     b_ia->size[0] = iafirst;
-    emxEnsureCapacity_int32_T1(sp, b_ia, ialast, &oc_emlrtRTEI);
+    emxEnsureCapacity_int32_T1(sp, b_ia, ialast, &qc_emlrtRTEI);
     for (ialast = 0; ialast < iafirst; ialast++) {
       b_ia->data[ialast] = ib->data[ialast];
     }
 
     ialast = ib->size[0];
     ib->size[0] = b_ia->size[0];
-    emxEnsureCapacity_int32_T1(sp, ib, ialast, &pc_emlrtRTEI);
+    emxEnsureCapacity_int32_T1(sp, ib, ialast, &rc_emlrtRTEI);
     iafirst = b_ia->size[0];
     for (ialast = 0; ialast < iafirst; ialast++) {
       ib->data[ialast] = b_ia->data[ialast];
@@ -287,7 +287,7 @@ void b_do_vectors(const emlrtStack *sp, const emxArray_real_T *a, const
   emxFree_int32_T(sp, &b_ia);
   if (ncmax > 0) {
     if (!(nc <= ncmax)) {
-      emlrtErrorWithMessageIdR2018a(sp, &ge_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(sp, &le_emlrtRTEI,
         "Coder:builtins:AssertionFailed", "Coder:builtins:AssertionFailed", 0);
     }
 
@@ -343,8 +343,8 @@ void c_do_vectors(const emlrtStack *sp, const emxArray_real_T *a, const
   }
 
   if (!issorted(b)) {
-    st.site = &pc_emlrtRSI;
-    d_error(&st);
+    st.site = &tc_emlrtRSI;
+    c_error(&st);
   }
 
   nc = 0;
@@ -412,7 +412,7 @@ void c_do_vectors(const emlrtStack *sp, const emxArray_real_T *a, const
 
   if (a->size[1] > 0) {
     if (!(nia <= a->size[1])) {
-      emlrtErrorWithMessageIdR2018a(sp, &fe_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(sp, &ke_emlrtRTEI,
         "Coder:builtins:AssertionFailed", "Coder:builtins:AssertionFailed", 0);
     }
 
@@ -440,7 +440,7 @@ void c_do_vectors(const emlrtStack *sp, const emxArray_real_T *a, const
 
     emxFree_int32_T(sp, &b_ia);
     if (!(nc <= a->size[1])) {
-      emlrtErrorWithMessageIdR2018a(sp, &ge_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(sp, &le_emlrtRTEI,
         "Coder:builtins:AssertionFailed", "Coder:builtins:AssertionFailed", 0);
     }
 
@@ -557,7 +557,7 @@ void do_vectors(const emlrtStack *sp, const emxArray_real_T *a, real_T b,
 
   if (a->size[1] > 0) {
     if (!(nia <= a->size[1])) {
-      emlrtErrorWithMessageIdR2018a(sp, &fe_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(sp, &ke_emlrtRTEI,
         "Coder:builtins:AssertionFailed", "Coder:builtins:AssertionFailed", 0);
     }
 
@@ -585,7 +585,7 @@ void do_vectors(const emlrtStack *sp, const emxArray_real_T *a, real_T b,
 
     emxFree_int32_T(sp, &b_ia);
     if (!(nc <= a->size[1])) {
-      emlrtErrorWithMessageIdR2018a(sp, &ge_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(sp, &le_emlrtRTEI,
         "Coder:builtins:AssertionFailed", "Coder:builtins:AssertionFailed", 0);
     }
 

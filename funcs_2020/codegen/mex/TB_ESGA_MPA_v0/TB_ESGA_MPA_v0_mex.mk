@@ -1,4 +1,4 @@
-START_DIR = C:\Users\BRUNOF~1\DOCUME~1\MATLAB\SCMA_2~1\FUNCS_~1
+START_DIR = C:\Users\BRUNOF~1\Dropbox\MATLAB\SC05F9~1\FUNCS_~1
 
 MATLAB_ROOT = C:\PROGRA~1\MATLAB\R2018a
 MAKEFILE = TB_ESGA_MPA_v0_mex.mk
@@ -16,12 +16,12 @@ SRC_FILES =  \
 	eml_int_forloop_overflow_check.c \
 	eml_setop.c \
 	issorted.c \
-	squeeze.c \
 	scalexpAlloc.c \
 	exp.c \
 	sqrt.c \
 	prod.c \
 	indexShapeCheck.c \
+	squeeze.c \
 	sum.c \
 	log.c \
 	mod.c \
