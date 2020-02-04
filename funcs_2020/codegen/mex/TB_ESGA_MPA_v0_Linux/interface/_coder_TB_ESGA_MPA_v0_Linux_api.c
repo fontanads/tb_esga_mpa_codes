@@ -13,7 +13,7 @@
 #include "TB_ESGA_MPA_v0_Linux_data.h"
 
 /* Variable Definitions */
-static emlrtRTEInfo sd_emlrtRTEI = { 1,/* lineNo */
+static emlrtRTEInfo vd_emlrtRTEI = { 1,/* lineNo */
   1,                                   /* colNo */
   "_coder_TB_ESGA_MPA_v0_Linux_api",   /* fName */
   ""                                   /* pName */
@@ -462,13 +462,13 @@ void TB_ESGA_MPA_v0_Linux_api(const mxArray * const prhs[12], int32_T nlhs,
 
   st.tls = emlrtRootTLSGlobal;
   emlrtHeapReferenceStackEnterFcnR2012b(&st);
-  emxInit_creal_T1(&st, &y_all, 3, &sd_emlrtRTEI, true);
-  emxInit_real_T(&st, &F, 2, &sd_emlrtRTEI, true);
-  emxInit_real_T(&st, &F_int, 2, &sd_emlrtRTEI, true);
-  emxInit_creal_T1(&st, &H, 3, &sd_emlrtRTEI, true);
-  emxInit_real_T1(&st, &a_priori_beliefs, 3, &sd_emlrtRTEI, true);
-  emxInit_real_T1(&st, &soft_bits, 3, &sd_emlrtRTEI, true);
-  emxInit_real_T(&st, &hard_symbols, 2, &sd_emlrtRTEI, true);
+  emxInit_creal_T1(&st, &y_all, 3, &vd_emlrtRTEI, true);
+  emxInit_real_T(&st, &F, 2, &vd_emlrtRTEI, true);
+  emxInit_real_T(&st, &F_int, 2, &vd_emlrtRTEI, true);
+  emxInit_creal_T1(&st, &H, 3, &vd_emlrtRTEI, true);
+  emxInit_real_T1(&st, &a_priori_beliefs, 3, &vd_emlrtRTEI, true);
+  emxInit_real_T1(&st, &soft_bits, 3, &vd_emlrtRTEI, true);
+  emxInit_real_T(&st, &hard_symbols, 2, &vd_emlrtRTEI, true);
 
   /* Marshall function inputs */
   emlrt_marshallIn(&st, emlrtAliasP(prhs[0]), "y_all", y_all);

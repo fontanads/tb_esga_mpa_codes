@@ -13,7 +13,7 @@
 #include "error.h"
 
 /* Variable Definitions */
-static emlrtRSInfo kd_emlrtRSI = { 12, /* lineNo */
+static emlrtRSInfo pd_emlrtRSI = { 12, /* lineNo */
   "sqrt",                              /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/lib/matlab/elfun/sqrt.m"/* pathName */
 };
@@ -25,8 +25,8 @@ void b_sqrt(const emlrtStack *sp, real_T *x)
   st.prev = sp;
   st.tls = sp->tls;
   if (*x < 0.0) {
-    st.site = &kd_emlrtRSI;
-    e_error(&st);
+    st.site = &pd_emlrtRSI;
+    d_error(&st);
   }
 
   *x = muDoubleScalarSqrt(*x);

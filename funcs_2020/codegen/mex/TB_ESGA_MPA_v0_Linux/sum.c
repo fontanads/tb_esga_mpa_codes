@@ -13,22 +13,22 @@
 #include "TB_ESGA_MPA_v0_Linux_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo be_emlrtRSI = { 9,  /* lineNo */
+static emlrtRSInfo ke_emlrtRSI = { 9,  /* lineNo */
   "sum",                               /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/lib/matlab/datafun/sum.m"/* pathName */
 };
 
-static emlrtRSInfo ce_emlrtRSI = { 172,/* lineNo */
+static emlrtRSInfo le_emlrtRSI = { 172,/* lineNo */
   "combineVectorElements",             /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/lib/matlab/datafun/private/combineVectorElements.m"/* pathName */
 };
 
-static emlrtRSInfo de_emlrtRSI = { 177,/* lineNo */
+static emlrtRSInfo me_emlrtRSI = { 177,/* lineNo */
   "combineVectorElements",             /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/lib/matlab/datafun/private/combineVectorElements.m"/* pathName */
 };
 
-static emlrtRSInfo ee_emlrtRSI = { 195,/* lineNo */
+static emlrtRSInfo ne_emlrtRSI = { 195,/* lineNo */
   "combineVectorElements",             /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/lib/matlab/datafun/private/combineVectorElements.m"/* pathName */
 };
@@ -46,7 +46,7 @@ real_T b_sum(const emlrtStack *sp, const emxArray_real_T *x)
   emlrtStack e_st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &be_emlrtRSI;
+  st.site = &ke_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
@@ -57,18 +57,18 @@ real_T b_sum(const emlrtStack *sp, const emxArray_real_T *x)
   e_st.tls = d_st.tls;
   if ((x->size[0] == 1) || (x->size[0] != 1)) {
   } else {
-    emlrtErrorWithMessageIdR2018a(&st, &me_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &re_emlrtRTEI,
       "Coder:toolbox:autoDimIncompatibility",
       "Coder:toolbox:autoDimIncompatibility", 0);
   }
 
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &rd_emlrtRSI;
   if (x->size[0] == 0) {
     y = 0.0;
   } else {
-    c_st.site = &nd_emlrtRSI;
+    c_st.site = &sd_emlrtRSI;
     y = x->data[0];
-    d_st.site = &od_emlrtRSI;
+    d_st.site = &td_emlrtRSI;
     overflow = ((!(2 > x->size[0])) && (x->size[0] > 2147483646));
     if (overflow) {
       e_st.site = &lb_emlrtRSI;
@@ -98,7 +98,7 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
   emlrtStack e_st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &be_emlrtRSI;
+  st.site = &ke_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
@@ -109,17 +109,17 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
   e_st.tls = d_st.tls;
   if ((x->size[2] == 1) || (x->size[2] != 1)) {
   } else {
-    emlrtErrorWithMessageIdR2018a(&st, &me_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &re_emlrtRTEI,
       "Coder:toolbox:autoDimIncompatibility",
       "Coder:toolbox:autoDimIncompatibility", 0);
   }
 
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &rd_emlrtRSI;
   vlen = x->size[2];
   if (x->size[2] == 0) {
     y = 0.0;
   } else {
-    c_st.site = &nd_emlrtRSI;
+    c_st.site = &sd_emlrtRSI;
     k = 3;
     if (x->size[2] == 1) {
       k = 2;
@@ -131,8 +131,8 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
       vstride = 1;
     }
 
-    d_st.site = &ce_emlrtRSI;
-    d_st.site = &de_emlrtRSI;
+    d_st.site = &le_emlrtRSI;
+    d_st.site = &me_emlrtRSI;
     if (vstride > 2147483646) {
       e_st.site = &lb_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -142,7 +142,7 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
       y = x->data[j - 1];
     }
 
-    d_st.site = &od_emlrtRSI;
+    d_st.site = &td_emlrtRSI;
     if ((!(2 > vlen)) && (vlen > 2147483646)) {
       e_st.site = &lb_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -150,7 +150,7 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
 
     for (k = 2; k <= vlen; k++) {
       xoffset = (k - 1) * vstride;
-      d_st.site = &ee_emlrtRSI;
+      d_st.site = &ne_emlrtRSI;
       for (j = 1; j <= vstride; j++) {
         y += x->data[(xoffset + j) - 1];
       }

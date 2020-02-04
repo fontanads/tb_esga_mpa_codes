@@ -16,12 +16,12 @@ SRC_FILES =  \
 	eml_int_forloop_overflow_check.c \
 	eml_setop.c \
 	issorted.c \
-	squeeze.c \
 	scalexpAlloc.c \
 	exp.c \
 	sqrt.c \
 	prod.c \
 	indexShapeCheck.c \
+	squeeze.c \
 	sum.c \
 	log.c \
 	mod.c \

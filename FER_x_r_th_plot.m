@@ -3,7 +3,10 @@ close all;
 clear all;
 clc;
 
-addpath('./tempR','./results/','~/Seafile/SCMA_2020_TB_ESGA_MPA/tempR','~/Seafile/SCMA_2020_TB_ESGA_MPA/results/','./funcs_2020/export_fig/')
+addpath('./tempR','./results/','./funcs_2020/export_fig/')
+
+addpath('~/Seafile/SCMA_2020_TB_ESGA_MPA/tempR','~/Seafile/SCMA_2020_TB_ESGA_MPA/results/')
+% addpath('D:/Seafile/SCMA_2020_TB_ESGA_MPA/tempR','D:/Seafile/SCMA_2020_TB_ESGA_MPA/results/')
 
 lnwdt=1.25;
 mrkrsz = 7;
@@ -11,7 +14,7 @@ mrkrsz = 7;
 %% SELECT metric
 
 error_metric_strs = {'Symbol', 'Bit', 'Frame'};
-user_SER_BER_FER= [0 1 0]; % ou exclusivo, selecionar apenas uma posição
+user_SER_BER_FER= [0 0 1]; % ou exclusivo, selecionar apenas uma posição
 
 %%
 
@@ -88,7 +91,7 @@ legend show; set(legend,'interpreter','latex','location','best','fontsize',14);
 grid on
 
 axis([0 1 1e-3 1e0])
-axis([0 1 5e-7 1e0])
+axis([0 1 5e-8 1e0])
 
 %%
 

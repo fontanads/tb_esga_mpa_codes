@@ -14,23 +14,23 @@
 #include "error.h"
 
 /* Variable Definitions */
-static emlrtRSInfo bc_emlrtRSI = { 31, /* lineNo */
+static emlrtRSInfo wd_emlrtRSI = { 31, /* lineNo */
   "squeeze",                           /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/lib/matlab/elmat/squeeze.m"/* pathName */
 };
 
-static emlrtRSInfo cc_emlrtRSI = { 54, /* lineNo */
+static emlrtRSInfo xd_emlrtRSI = { 54, /* lineNo */
   "reshape",                           /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/lib/matlab/elmat/reshape.m"/* pathName */
 };
 
-static emlrtRTEInfo nc_emlrtRTEI = { 31,/* lineNo */
+static emlrtRTEInfo ed_emlrtRTEI = { 31,/* lineNo */
   1,                                   /* colNo */
   "squeeze",                           /* fName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/lib/matlab/elmat/squeeze.m"/* pName */
 };
 
-static emlrtRTEInfo oe_emlrtRTEI = { 61,/* lineNo */
+static emlrtRTEInfo te_emlrtRTEI = { 61,/* lineNo */
   15,                                  /* colNo */
   "reshape",                           /* fName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/lib/matlab/elmat/reshape.m"/* pName */
@@ -59,7 +59,7 @@ void b_squeeze(const emlrtStack *sp, const emxArray_real_T *a, emxArray_real_T
     sqsz_idx_0 = a->size[2];
   }
 
-  st.site = &bc_emlrtRSI;
+  st.site = &wd_emlrtRSI;
   k = a->size[2];
   n = 1;
   if (a->size[2] > 1) {
@@ -67,12 +67,12 @@ void b_squeeze(const emlrtStack *sp, const emxArray_real_T *a, emxArray_real_T
   }
 
   if (sqsz_idx_0 > muIntScalarMax_sint32(k, n)) {
-    b_st.site = &cc_emlrtRSI;
-    c_error(&b_st);
+    b_st.site = &xd_emlrtRSI;
+    e_error(&b_st);
   }
 
   if (sqsz_idx_0 != a->size[2]) {
-    emlrtErrorWithMessageIdR2018a(&st, &oe_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &te_emlrtRTEI,
       "Coder:MATLAB:getReshapeDims_notSameNumel",
       "Coder:MATLAB:getReshapeDims_notSameNumel", 0);
   }
@@ -80,7 +80,7 @@ void b_squeeze(const emlrtStack *sp, const emxArray_real_T *a, emxArray_real_T
   k = b->size[0] * b->size[1];
   b->size[0] = sqsz_idx_0;
   b->size[1] = 1;
-  emxEnsureCapacity_real_T(&st, b, k, &nc_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, b, k, &ed_emlrtRTEI);
   for (k = 0; k < sqsz_idx_0; k++) {
     b->data[k] = a->data[k];
   }
@@ -95,7 +95,7 @@ void squeeze(const emlrtStack *sp, const emxArray_creal_T *a, emxArray_creal_T
   emlrtStack b_st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &bc_emlrtRSI;
+  st.site = &wd_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   nx = a->size[1];
@@ -105,14 +105,14 @@ void squeeze(const emlrtStack *sp, const emxArray_creal_T *a, emxArray_creal_T
   }
 
   if (a->size[1] > muIntScalarMax_sint32(nx, n)) {
-    b_st.site = &cc_emlrtRSI;
-    c_error(&b_st);
+    b_st.site = &xd_emlrtRSI;
+    e_error(&b_st);
   }
 
   nx = b->size[0] * b->size[1];
   b->size[0] = 1;
   b->size[1] = a->size[1];
-  emxEnsureCapacity_creal_T(&st, b, nx, &nc_emlrtRTEI);
+  emxEnsureCapacity_creal_T(&st, b, nx, &ed_emlrtRTEI);
   n = a->size[1];
   for (nx = 0; nx < n; nx++) {
     b->data[nx] = a->data[nx];

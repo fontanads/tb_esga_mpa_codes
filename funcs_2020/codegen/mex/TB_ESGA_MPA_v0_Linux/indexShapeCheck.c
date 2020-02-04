@@ -11,22 +11,22 @@
 #include "indexShapeCheck.h"
 
 /* Variable Definitions */
-static emlrtRSInfo qd_emlrtRSI = { 18, /* lineNo */
+static emlrtRSInfo vd_emlrtRSI = { 18, /* lineNo */
   "indexShapeCheck",                   /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/eml/+coder/+internal/indexShapeCheck.m"/* pathName */
 };
 
-static emlrtRSInfo ve_emlrtRSI = { 30, /* lineNo */
+static emlrtRSInfo ff_emlrtRSI = { 30, /* lineNo */
   "indexShapeCheck",                   /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/eml/+coder/+internal/indexShapeCheck.m"/* pathName */
 };
 
-static emlrtRSInfo we_emlrtRSI = { 80, /* lineNo */
+static emlrtRSInfo gf_emlrtRSI = { 80, /* lineNo */
   "indexShapeCheck",                   /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/eml/+coder/+internal/indexShapeCheck.m"/* pathName */
 };
 
-static emlrtRTEInfo ne_emlrtRTEI = { 88,/* lineNo */
+static emlrtRTEInfo se_emlrtRTEI = { 88,/* lineNo */
   9,                                   /* colNo */
   "indexShapeCheck",                   /* fName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/eml/+coder/+internal/indexShapeCheck.m"/* pName */
@@ -57,10 +57,10 @@ void b_indexShapeCheck(const emlrtStack *sp, const int32_T matrixSize[2],
   }
 
   if (nonSingletonDimFound) {
-    st.site = &ve_emlrtRSI;
-    b_st.site = &we_emlrtRSI;
+    st.site = &ff_emlrtRSI;
+    b_st.site = &gf_emlrtRSI;
     if ((matrixSize[0] == 1) != (indexSize == 1)) {
-      emlrtErrorWithMessageIdR2018a(&b_st, &ne_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&b_st, &se_emlrtRTEI,
         "Coder:FE:PotentialMatrixMatrix", "Coder:FE:PotentialMatrixMatrix", 0);
     }
   }
@@ -96,9 +96,9 @@ void indexShapeCheck(const emlrtStack *sp, int32_T matrixSize, const int32_T
     nonSingletonDimFound = false;
   }
 
-  st.site = &qd_emlrtRSI;
+  st.site = &vd_emlrtRSI;
   if (nonSingletonDimFound) {
-    emlrtErrorWithMessageIdR2018a(&st, &ne_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &se_emlrtRTEI,
       "Coder:FE:PotentialVectorVector", "Coder:FE:PotentialVectorVector", 0);
   }
 }

@@ -36,15 +36,15 @@ extern emlrtRSInfo tb_emlrtRSI;
 extern emlrtRSInfo ub_emlrtRSI;
 extern emlrtRSInfo vb_emlrtRSI;
 extern emlrtRSInfo wb_emlrtRSI;
-extern emlrtRSInfo dc_emlrtRSI;
-extern emlrtRSInfo ec_emlrtRSI;
-extern emlrtRSInfo oc_emlrtRSI;
-extern emlrtRSInfo qc_emlrtRSI;
-extern emlrtRSInfo md_emlrtRSI;
-extern emlrtRSInfo nd_emlrtRSI;
-extern emlrtRSInfo od_emlrtRSI;
-extern emlrtRSInfo fe_emlrtRSI;
-extern emlrtRTEInfo me_emlrtRTEI;
+extern emlrtRSInfo sc_emlrtRSI;
+extern emlrtRSInfo uc_emlrtRSI;
+extern emlrtRSInfo rd_emlrtRSI;
+extern emlrtRSInfo sd_emlrtRSI;
+extern emlrtRSInfo td_emlrtRSI;
+extern emlrtRSInfo yd_emlrtRSI;
+extern emlrtRSInfo ae_emlrtRSI;
+extern emlrtRSInfo oe_emlrtRSI;
+extern emlrtRTEInfo re_emlrtRTEI;
 
 #endif
 

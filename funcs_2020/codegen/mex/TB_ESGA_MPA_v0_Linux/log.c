@@ -20,7 +20,7 @@ void b_log(const emlrtStack *sp, real_T *x)
   st.prev = sp;
   st.tls = sp->tls;
   if (*x < 0.0) {
-    st.site = &fe_emlrtRSI;
+    st.site = &oe_emlrtRSI;
     f_error(&st);
   }
 

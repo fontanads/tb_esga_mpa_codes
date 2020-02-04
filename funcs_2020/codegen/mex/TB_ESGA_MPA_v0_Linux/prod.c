@@ -13,7 +13,7 @@
 #include "TB_ESGA_MPA_v0_Linux_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo ld_emlrtRSI = { 10, /* lineNo */
+static emlrtRSInfo qd_emlrtRSI = { 10, /* lineNo */
   "prod",                              /* fcnName */
   "/usr/local/MATLAB/R2018a/toolbox/eml/lib/matlab/datafun/prod.m"/* pathName */
 };
@@ -31,7 +31,7 @@ real_T prod(const emlrtStack *sp, const emxArray_real_T *x)
   emlrtStack e_st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &qd_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
@@ -42,18 +42,18 @@ real_T prod(const emlrtStack *sp, const emxArray_real_T *x)
   e_st.tls = d_st.tls;
   if ((x->size[1] == 1) || (x->size[1] != 1)) {
   } else {
-    emlrtErrorWithMessageIdR2018a(&st, &me_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &re_emlrtRTEI,
       "Coder:toolbox:autoDimIncompatibility",
       "Coder:toolbox:autoDimIncompatibility", 0);
   }
 
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &rd_emlrtRSI;
   if (x->size[1] == 0) {
     y = 1.0;
   } else {
-    c_st.site = &nd_emlrtRSI;
+    c_st.site = &sd_emlrtRSI;
     y = x->data[0];
-    d_st.site = &od_emlrtRSI;
+    d_st.site = &td_emlrtRSI;
     overflow = ((!(2 > x->size[1])) && (x->size[1] > 2147483646));
     if (overflow) {
       e_st.site = &lb_emlrtRSI;

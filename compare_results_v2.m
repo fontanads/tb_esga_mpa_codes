@@ -26,11 +26,11 @@ filename_str = sprintf('SCMA_TB_ESGA_Many_Rx_%sErrorRate.pdf',error_metric_str);
 %%
 
 % ---------------- Result 1 ---------------- %
-result(1).file = ' .mat';
+result(1).file = '[Inspiron-5548]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr1_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_100_[04-02-2020][09-13-05]_Temp.mat';
 load(result(1).file,'EbN0dB','current_FER','current_BER','current_SER');
 result(1).x = EbN0dB;
 result(1).y = user_SER_BER_FER(1)*current_SER + user_SER_BER_FER(2)*current_BER + user_SER_BER_FER(3)*current_FER;
-result(1).label = '$N_r=1$';
+result(1).label = '$N_r=1$, $r=1$';
 result(1).marker = 'o';
 result(1).color = [0 0 255]/255;
 % ---------------- Result 1 ---------------- %
