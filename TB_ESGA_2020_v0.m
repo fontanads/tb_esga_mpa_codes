@@ -29,7 +29,7 @@ codeword_length = 128;                    % codeword legnth of LDPC code (availa
 Num_iters_LDPC_Belief_Propagation = 10;   % number of inner belief propagation iterations @ the LDPC decoder
 
 % Rx Parameters
-Nr=1;                                     % Number of Rx antennas @ base station
+Nr=2;                                     % Number of Rx antennas @ base station
 
 To = 3;                                   % number of outer loops during iterative detection and decoding 
 Tm_first = 5;                             % number of inner MPA iterations of the SCMA modulation detector (first outer loop)

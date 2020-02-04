@@ -4443,7 +4443,7 @@ void TB_ESGA_MPA_v0(const emlrtStack *sp, const emxArray_creal_T *y_all, const
   int32_T i3;
   int32_T c_ii;
   int32_T i4;
-  creal_T y_data[2000];
+  creal_T y_data[1000];
   int32_T t;
   int32_T nx;
   int32_T k;
@@ -4460,7 +4460,7 @@ void TB_ESGA_MPA_v0(const emlrtStack *sp, const emxArray_creal_T *y_all, const
   int32_T ib_size[1];
   int32_T iv0[3];
   int32_T q_id;
-  real_T a_priori_beliefs_data[64];
+  real_T a_priori_beliefs_data[100];
   real_T max_temp_0;
   int32_T nr;
   coder_internal_ref_4 b_nr;
