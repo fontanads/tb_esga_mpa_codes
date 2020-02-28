@@ -29,13 +29,13 @@ codeword_length = 128;                    % codeword legnth of LDPC code (availa
 Num_iters_LDPC_Belief_Propagation = 10;   % number of inner belief propagation iterations @ the LDPC decoder
 
 % Rx Parameters
-Nr=2;                                     % Number of Rx antennas @ base station
+Nr=1;                                     % Number of Rx antennas @ base station
 
 To = 3;                                   % number of outer loops during iterative detection and decoding 
 Tm_first = 5;                             % number of inner MPA iterations of the SCMA modulation detector (first outer loop)
 Tm_after = 1;                             % number of inner MPA iterations of the SCMA modulation detector (second outer loop and on)
 
-r_th = 1.0;                              % r: threshold parameter for TB-ESGA-MPA (0 <= r <= 1), where 0 corresponds to original MPA and 1 corresponds to full Gaussian Approx.
+r_th = 0.0;                              % r: threshold parameter for TB-ESGA-MPA (0 <= r <= 1), where 0 corresponds to original MPA and 1 corresponds to full Gaussian Approx.
 
 LLR_clip_value = 20;                      % LLR saturation value for the extrinsic LLRs @ the input of the SCMA MPA (applied after: FEC decoding + extrinsic=in-out + re-interleaving)
 a_FF = 1.;                                % scaling value to multiply extrinsic LLRs fed forward to the FEC

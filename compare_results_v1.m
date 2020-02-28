@@ -26,7 +26,9 @@ filename_str = sprintf('SCMA_TB_ESGA_Many_Rx_%sErrorRate.pdf',error_metric_str);
 %%
 
 % ---------------- Result 1 ---------------- %
-result(1).file = '[ZenBook-S-UX391UA]_J20_K12_M8_q3_N3_LDPC_n128_Rx_Nr1_EbN0dB_0_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_0_[24-01-2020][18-03-51]_Temp.mat';
+% result(1).file = '[ZenBook-S-UX391UA]_J20_K12_M8_q3_N3_LDPC_n128_Rx_Nr1_EbN0dB_0_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_0_[24-01-2020][18-03-51]_Temp.mat';
+% result(1).file = '[lcs-cluster02]_J20_K12_M8_q3_N3_LDPC_n128_Rx_Nr1_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_100_[05-02-2020][10-10-29]_Temp.mat';
+result(1).file = '[lcs-cluster02]_J20_K12_M8_q3_N3_LDPC_n128_Rx_Nr1_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_50_[05-02-2020][10-50-24]_Temp.mat';
 load(result(1).file,'EbN0dB','current_FER','current_BER','current_SER');
 result(1).x = EbN0dB;
 result(1).y = user_SER_BER_FER(1)*current_SER + user_SER_BER_FER(2)*current_BER + user_SER_BER_FER(3)*current_FER;
@@ -37,7 +39,9 @@ result(1).color = [0 0 255]/255;
 
 
 % ---------------- Result 2 ---------------- %
-result(2).file = '[ZenBook-S-UX391UA]_J20_K12_M8_q3_N3_LDPC_n128_Rx_Nr2_EbN0dB_0_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_0_[25-01-2020][09-41-13]_Temp.mat';
+% result(2).file = '[ZenBook-S-UX391UA]_J20_K12_M8_q3_N3_LDPC_n128_Rx_Nr2_EbN0dB_0_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_0_[25-01-2020][09-41-13]_Temp.mat';
+% result(2).file = '[lcs-cluster02]_J20_K12_M8_q3_N3_LDPC_n128_Rx_Nr2_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_100_[05-02-2020][10-10-48]_Temp.mat';
+result(2).file = '[lcs-cluster02]_J20_K12_M8_q3_N3_LDPC_n128_Rx_Nr2_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_50_[05-02-2020][10-51-11]_Temp.mat';
 load(result(2).file,'EbN0dB','current_FER','current_BER','current_SER');
 result(2).x = EbN0dB;
 result(2).y = user_SER_BER_FER(1)*current_SER + user_SER_BER_FER(2)*current_BER + user_SER_BER_FER(3)*current_FER;
