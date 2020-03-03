@@ -43,7 +43,7 @@ result(1).color = [0 0 255]/255;
 
 
 % ---------------- Result 2 ---------------- %
-result(2).file = '[XPS-8930]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr3_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_0_[28-02-2020][13-01-15]_Temp';
+result(2).file = '[XPS-8930]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr3_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_0_[28-02-2020][13-01-15]';
 load(result(2).file,'EbN0dB','current_FER','current_BER','current_SER');
 result(2).x = EbN0dB;
 result(2).y = user_SER_BER_FER(1)*current_SER + user_SER_BER_FER(2)*current_BER + user_SER_BER_FER(3)*current_FER;
@@ -55,7 +55,7 @@ result(2).color = [240 40 30]/255;
 
 
 % ---------------- Result 1 ---------------- %
-result(3).file = '[XPS-8930]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr3_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_100_[04-02-2020][09-25-26]_Temp.mat';
+result(3).file = '[XPS-8930]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr3_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_100_[04-02-2020][09-25-26].mat';
 load(result(3).file,'EbN0dB','current_FER','current_BER','current_SER');
 result(3).x = EbN0dB;
 result(3).y = user_SER_BER_FER(1)*current_SER + user_SER_BER_FER(2)*current_BER + user_SER_BER_FER(3)*current_FER;

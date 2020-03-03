@@ -43,7 +43,7 @@ result(1).color = [0 0 255]/255;
 
 
 % ---------------- Result 2 ---------------- %
-result(2).file = '[ASUS-UX391U]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr4_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_0_[28-02-2020][11-59-54]_Temp';
+result(2).file = '[XPS-8930]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr4_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_0_[29-02-2020][06-52-40]';
 load(result(2).file,'EbN0dB','current_FER','current_BER','current_SER');
 result(2).x = EbN0dB;
 result(2).y = user_SER_BER_FER(1)*current_SER + user_SER_BER_FER(2)*current_BER + user_SER_BER_FER(3)*current_FER;
@@ -68,7 +68,7 @@ result(3).color = [0 0 255]/255;
 
 
 % ---------------- Result 2 ---------------- %
-result(4).file = '[ASUS-UX391U]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr4_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_100_[28-02-2020][12-00-19]_Temp';
+result(4).file = '[XPS-8930]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr4_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_100_[29-02-2020][06-52-06]';
 load(result(4).file,'EbN0dB','current_FER','current_BER','current_SER');
 result(4).x = EbN0dB;
 result(4).y = user_SER_BER_FER(1)*current_SER + user_SER_BER_FER(2)*current_BER + user_SER_BER_FER(3)*current_FER;
