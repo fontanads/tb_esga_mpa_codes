@@ -5,13 +5,14 @@ clc;
 
 addpath('./tempR','./results/','./funcs_2020/export_fig/')
 
+addpath('C://Users/Bruno Fontana/Seafile/SCMA_2020_TB_ESGA_MPA/results/','C://Users/Bruno Fontana/Seafile/SCMA_2020_TB_ESGA_MPA/tempR/')
 lnwdt=1.25;
 mrkrsz = 7;
 
 %% SELECT metric
 
 error_metric_strs = {'Symbol', 'Bit', 'Frame'};
-user_SER_BER_FER= [0 1 0]; % ou exclusivo, selecionar apenas uma posição
+user_SER_BER_FER= [0 0 1]; % ou exclusivo, selecionar apenas uma posição
 
 %%
 

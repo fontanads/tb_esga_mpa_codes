@@ -10,8 +10,8 @@ rng(1)
 %% 
 
 EbN0dB = 10:2:22;                                                            % EbN0 [dB] points to simulate
-Pe = 1e-3;                                                                  % acceptable probability of error
-min_num_of_errors = 50;                                                      % desired number of frame errors per point
+Pe = 1e-4;                                                                  % acceptable probability of error
+min_num_of_errors = 100;                                                      % desired number of frame errors per point
 iter_cnt_saving_threshold = 100;                                              % saving temp mat files every #x iterations
 print_frequency = 10;                                                        % frequency of iterations to print simulation status
 
@@ -35,7 +35,7 @@ To = 3;                                   % number of outer loops during iterati
 Tm_first = 5;                             % number of inner MPA iterations of the SCMA modulation detector (first outer loop)
 Tm_after = 1;                             % number of inner MPA iterations of the SCMA modulation detector (second outer loop and on)
 
-r_th = 0.0;                              % r: threshold parameter for TB-ESGA-MPA (0 <= r <= 1), where 0 corresponds to original MPA and 1 corresponds to full Gaussian Approx.
+r_th = 1.0;                              % r: threshold parameter for TB-ESGA-MPA (0 <= r <= 1), where 0 corresponds to original MPA and 1 corresponds to full Gaussian Approx.
 
 LLR_clip_value = 20;                      % LLR saturation value for the extrinsic LLRs @ the input of the SCMA MPA (applied after: FEC decoding + extrinsic=in-out + re-interleaving)
 a_FF = 1.;                                % scaling value to multiply extrinsic LLRs fed forward to the FEC

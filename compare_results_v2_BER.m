@@ -5,7 +5,7 @@ clc;
 
 addpath('./tempR','./results/','./funcs_2020/export_fig/')
 
-addpath('~/Seafile/SCMA_2020_TB_ESGA_MPA/tempR','~/Seafile/SCMA_2020_TB_ESGA_MPA/results/')
+% addpath('~/Seafile/SCMA_2020_TB_ESGA_MPA/tempR','~/Seafile/SCMA_2020_TB_ESGA_MPA/results/')
 % addpath('D:/Seafile/SCMA_2020_TB_ESGA_MPA/tempR','D:/Seafile/SCMA_2020_TB_ESGA_MPA/results/')
 
 lnwdt=1.25;
@@ -14,7 +14,7 @@ mrkrsz = 7;
 %% SELECT metric
 
 error_metric_strs = {'Symbol', 'Bit', 'Frame'};
-user_SER_BER_FER= [0 0 1]; % ou exclusivo, selecionar apenas uma posicao
+user_SER_BER_FER= [0 1 0]; % ou exclusivo, selecionar apenas uma posicao
 
 %%
 
@@ -70,7 +70,7 @@ result(3).color = [120 165 50]/255;
 
 
 % ---------------- Result 4 ---------------- %
-result(4).file = '[XPS-8930]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr4_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_0_[05-02-2020][10-12-40]_Temp.mat';
+% result(4).file = '[XPS-8930]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr4_EbN0dB_10_to_22_MinErr_50_To3_Tm1_5_Tm2_1_100r_0_[05-02-2020][10-12-40]_Temp.mat';
 result(4).file = '[XPS-8930]_J6_K4_M4_q4_N2_LDPC_n128_Rx_Nr4_EbN0dB_10_to_22_MinErr_100_To3_Tm1_5_Tm2_1_100r_0_[13-03-2020][22-35-28]_Temp.mat';
 load(result(4).file,'EbN0dB','current_FER','current_BER','current_SER');
 result(4).x = EbN0dB;
@@ -149,7 +149,7 @@ legend show; set(legend,'interpreter','latex','location','best','fontsize',14);
 grid on
 
 % axis([0 22 1e-5 1e0])
-% axis([0 22 5e-8 3e-2])
+axis([10 22 1e-7 3e-2])
 
 %%
 
@@ -165,15 +165,15 @@ legend(hPlots(end-3:end), legend_str(:), 'Fontsize',14,'Location', 'northeast', 
 % 
 arr_len = [.12 .12 .26 .37]; 
 ang_arr = [90 90 90 90];
-origin_x = [0.825 .575  .32  0.22];
-origin_y = [0.37  .3175 .36 .31];
+origin_x = [0.825 .585  .32  0.215];
+origin_y = [0.49  .3775 .38 .34];
 back_color =[0,100, 250; 
              250,0,100;
              100,250,0;
              255,150,180];
 
 offset_y = [0 0 -arr_len(3)-0.06 -arr_len(4)-.06];
-offset_x = [0 0 -0.03 -0.03];
+offset_x = [0 0 -0.015 -0.03];
 for n=1:4
     X1 = [origin_x(n) origin_x(n)+arr_len(n)*cos(ang_arr(n)*pi/180)];
     Y1 = [origin_y(n) origin_y(n)+arr_len(n)*sin(ang_arr(n)*pi/180)];
@@ -188,7 +188,7 @@ for n=1:4
 end
 %%
 
-% export_fig(sprintf('./plots/%s',filename_str),'-transparent','-native','-r600'); % '-append'
+export_fig(sprintf('./plots/%s',filename_str),'-transparent','-native','-r600'); % '-append'
 
 
 %%
